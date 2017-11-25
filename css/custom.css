@@ -1,0 +1,163 @@
+/*
+*   CUSTOM STYLE
+*
+*/
+/* 
+    Helpers 
+*/
+.icon--md {
+  font-size: 3.8em;
+}
+.boxed.boxed--md {
+  padding: 1.9em;
+}
+.color--primary--02 {
+  color: #31639c !important;
+}
+.bg--primary--02 {
+  background: #31639c !important;
+}
+/* 
+    GEneral 
+*/
+@media (max-width: 767px) {
+  .lead {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+}
+/*
+   Secciones
+*/
+#inicio hr.short {
+  border-width: 2px;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#inicio .typed-text {
+  font-weight: 600;
+}
+#mision-vision {
+  margin-top: 4.5em;
+}
+#mision-vision .feature-6 {
+  margin-bottom: 0;
+}
+#mision-vision .feature-6 h2 {
+  margin: 0.75em 0;
+}
+#mision-vision .feature-6 p {
+  max-width: 80%;
+  margin: auto;
+}
+@media screen and (max-width: 767px) {
+  #mision-vision .feature-6:not(.boxed) {
+    margin-bottom: 30px;
+  }
+  #mision-vision .feature-6::last-child {
+    margin-bottom: 0;
+  }
+}
+#certificaciones .lead {
+  margin: 2.75em auto;
+}
+#certificaciones .slider {
+  margin-bottom: 1.5em;
+}
+#certificaciones .slider .slide {
+  text-align: center;
+}
+#servicios {
+  padding-bottom: 3.42857143em;
+}
+#servicios .feature-5 .feature__body {
+  width: 70%;
+  margin-left: 5%;
+}
+#servicios .text-block {
+  margin-bottom: 5em;
+}
+#servicios .feature-4 hr {
+  opacity: .8;
+}
+#servicios .feature-4 p {
+  height: 70px;
+  min-height: initial !important;
+}
+#servicios .feature-4 a.btn--primary {
+  background-color: #dcbb55;
+  color: white;
+  border-color: #dcbb55;
+}
+#servicios .feature-4 a.btn--primary:hover {
+  color: #eee;
+}
+@media screen and (max-width: 767px) {
+  #servicios .feature-4 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  #servicios .feature-4 p {
+    height: auto;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #servicios .text-block {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 990px) {
+  #porqueescogernos .feature-2 .feature__body {
+    width: 75%;
+    float: right;
+  }
+  #porqueescogernos .feature-2 i {
+    width: 25%;
+    float: left;
+    margin-top: 15px;
+  }
+}
+#clientes .list-inline--images li {
+  margin: 0 2.5em 3.5em;
+}
+@media screen and (max-width: 767px) {
+  #clientes .list-inline--images li {
+    margin: 0 2em 2.5em;
+  }
+}
+#contacto h4 {
+  margin-bottom: 1em;
+}
+#contacto h4 i {
+  position: relative;
+  top: 0.15em;
+  margin-right: 3px;
+}
+#contacto h4 + p {
+  padding-left: 30px;
+}
+#contacto form {
+  margin-top: 1.8em;
+}
+@media screen and (max-width: 767px) {
+  #contacto [class^="col-xs"] {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #contacto label {
+    font-size: 1em;
+  }
+  #contacto p {
+    word-wrap: break-word;
+  }
+}
+footer .logo-footer {
+  max-height: 75px;
+  background-color: lightgray;
+}

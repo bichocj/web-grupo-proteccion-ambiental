@@ -1,0 +1,224 @@
+/*
+*   CUSTOM STYLE
+*
+*/
+
+@primary-color: #dcbb55;
+@primary-color--02: #31639c;
+
+/* 
+    Helpers 
+*/
+.icon--md {
+  font-size: 3.8em;
+}
+.boxed.boxed--md {
+    padding: 1.9em;
+}
+.color--primary--02 {
+    // color: #2374ab !important;
+    color: @primary-color--02 !important;    
+    // color: #2c3d55 !important; //#465773
+    // color: #465773 !important; 
+    // color: #006E90 !important; 
+}
+.bg--primary--02 {
+    background: @primary-color--02 !important;        
+}
+/* 
+    GEneral 
+*/
+
+@media (max-width: 767px) {
+    .lead {
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
+
+}
+
+
+/*
+   Secciones
+*/
+#inicio {
+    hr.short {
+        border-width: 2px;
+        width:15%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .typed-text {
+        font-weight: 600;
+    }
+}
+#mision-vision {
+    margin-top: 4.5em;
+    .feature-6 {
+        margin-bottom: 0;
+        h2 {
+            margin: 0.75em 0;
+        }
+        p {
+        max-width: 80%;
+        margin: auto;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    #mision-vision {
+        .feature-6:not(.boxed) {
+            margin-bottom: 30px;
+        }
+        .feature-6::last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#certificaciones {
+    .lead {
+        margin: 2.75em auto;
+    }
+    .slider {
+        margin-bottom: 1.5em;
+        .slide {
+            text-align: center;
+        }
+    }
+}
+
+#servicios {
+    padding-bottom:  7.42857143em - 4em;
+    .feature-5 {
+        i {
+
+        }
+        .feature__body {
+            width: 70%;
+            margin-left: 5%;
+        }
+    }
+    .text-block {
+        margin-bottom: 5em;
+    }
+    .feature-4 {
+        hr {
+            opacity: .8;
+        }
+        p {
+            height: 70px;
+            min-height: initial !important;
+        }
+        a.btn--primary {
+            background-color: @primary-color;
+            color: white;
+            border-color: @primary-color;
+            &:hover{
+                color:#eee;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    #servicios {
+        .feature-4 {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            p {
+                height: auto;
+                padding-bottom: 25px;                
+            }        
+        } 
+    }   
+}
+@media screen and (max-width: 991px) {
+    #servicios {
+        .text-block {
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+
+@media (max-width: 990px ){
+    #porqueescogernos {
+        .feature-2 {
+            .feature__body {
+                width: 75%;
+                float: right;
+            }
+            i {
+                width: 25%;
+                float:left;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+#clientes {
+    .list-inline--images {
+        li {
+            margin: 0 2.5em 3.5em;
+
+            &:not(:last-child) {
+                // margin-bottom: 3em;
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 767px){
+    #clientes {
+        .list-inline--images {
+            li {
+                margin: 0 2em 2.5em;
+            }
+            
+        }
+    }   
+}
+#contacto {
+    h4 {
+        margin-bottom: 1em;
+        i {
+            position: relative;
+            top: 0.15em;
+            margin-right: 3px;
+        }
+        + p {
+            padding-left: 30px;
+        }
+    }
+    form {
+        margin-top: 1.8em;
+    }
+}
+@media screen and (max-width: 767px){
+    #contacto {
+       [class^="col-xs"] {
+           margin-left: auto;
+           margin-right: auto;
+       }
+       label {
+           font-size: 1em;
+       }
+       p {
+           word-wrap: break-word;
+       }
+    }
+}
+
+footer {
+    .logo-footer {
+        max-height: 75px;
+        background-color: lightgray;
+    }
+}
