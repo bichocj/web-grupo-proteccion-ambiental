@@ -25,11 +25,34 @@
 .bg--primary--02 {
     background: @primary-color--02 !important;        
 }
+ul.dots {
+    list-style: outside;
+    margin-left: 1.5em;
+}
 /* 
     GEneral 
 */
+.bar {
+    //For devices
+    .logo-wrap, 
+    .bar__module {
+        max-height: 45px;
+    }
+    .logo {
+        max-height: 70px;
+        top: -12px;
+    }
+    .logo-light {
+        background-color: lightgrey;
+    }
+}
 
 @media (max-width: 767px) {
+    .bar {
+        .bar__module {
+            max-height: initial;
+        }
+    }
     .lead {
         font-size: 1.25em;
         line-height: 1.5em;
@@ -38,12 +61,15 @@
 }
 
 
+
+
 /*
    Secciones
 */
 #inicio {
     hr.short {
-        border-width: 2px;
+        border-color: @primary-color--02;
+        border-width: 3px;
         width:15%;
         margin-left: auto;
         margin-right: auto;
@@ -221,4 +247,33 @@ footer {
         max-height: 75px;
         background-color: lightgray;
     }
+}
+
+/*
+    SERVICIOS
+*/
+#header-section {
+    hr.short {
+        border-color: #31639c;
+        border-width: 3px;
+        width: 15%;
+    }
+}
+#servicio-descripcion {
+    ul {
+        li {
+            margin-bottom: 1em;
+        }
+    }
+}
+@media (max-width: 767px){
+    #otros-servicios {
+        ul.slides {
+            .feature {
+                max-width: 450px !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }   
 }
