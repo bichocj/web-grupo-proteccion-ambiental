@@ -1,0 +1,215 @@
+{% extends 'main/components/layout.html' %}
+{% load static %}
+{% block content %}
+
+            <!-- Header section -->
+            <section id="header-section" class="imagebg cover cover-blocks bg--secondary" data-overlay="6">
+                <div class="background-image-holder hidden-xs" style="background: url(&quot;https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/cowork-6.jpg&quot;); opacity: 1;">
+                    <img alt="background" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/cowork-6.jpg">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-5 ">
+                            <div>
+                                <h1>Blog</h1>
+                                <hr class="short">
+                                <p class="lead">
+                                    Información relacionada al ámbito de nuestro trabajo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+
+            <section id="post-list" class="space--sm">
+                <div class="container">
+                    <div class="row">
+                        <!-- list-posts -->
+                        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-0">
+                            <div class="masonry masonry-blog-list">
+                                <!-- <div class="masonry-filter-container text-center">
+                                    <span>Category:</span>
+                                    <div class="masonry-filter-holder">
+                                        <div class="masonry__filters" data-filter-all-text="All Categories"></div>
+                                    </div>
+                                </div>
+                                <hr> -->
+                                <div class="masonry__container">
+                                    <article class="masonry__item" data-masonry-filter="Web Design">
+                                        <div class="article__title">
+                                            <a href="blog-post.html">
+                                                <h2>Optio sed a velit totam repudiandae dignissimos</h2>
+                                            </a>
+                                            <span>2 de Mayo 2017 </span>
+                                             in 
+                                            <span>
+                                                <a href="#" class="category">Sanemamiento ambiental</a>
+                                            </span>
+                                        </div>
+                                        <!--end article title-->
+                                        <div class="article__body">
+                                            <a href="blog-post.html">
+                                                <img alt="Image" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/blog-1.jpg" />
+                                            </a>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sed a velit totam repudiandae dignissimos, corporis eius praesentium enim facilis possimus dolorem ut voluptatum porro, consectetur iste impedit beatae inventore.
+                                            </p>
+                                            <a href="blog-post.html">Continuar leyendo &raquo;</a>
+                                        </div>
+                                    </article>
+                                    <!--end item-->
+                                    <article class="masonry__item" data-masonry-filter="Announcements">
+                                        <div class="article__title">
+                                            <a href="blog-post.html">
+                                                <h2>Optio sed a velit totam repudiandae dignissimos</h2>
+                                            </a>
+                                            <span>4 de Agosto 2017 </span>
+                                            en
+                                            <span>
+                                                <a href="#" class="category">Limpieza</a>
+                                            </span>
+                                        </div>
+                                        <!--end article title-->
+                                        <div class="article__body">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deleniti omnis dolorum quibusdam atque, qui eligendi nam unde dignissimos nulla cum quas voluptate voluptatem cumque nostrum aspernatur eaque ratione aut.
+                                            </p>
+                                            <a href="blog-post.html">Continuar leyendo &raquo;</a>
+                                        </div>
+                                    </article>
+                                    <!--end item-->
+                                    <article class="masonry__item" data-masonry-filter="Web Design">
+                                        <div class="article__title">
+                                            <a href="blog-post.html">
+                                                <h2>Optio sed a velit totam repudiandae dignissimos</h2>
+                                            </a>
+                                            <span>22 de Noviembre 2017 </span>
+                                            en
+                                            <span>
+                                                <a href="#" class="category">Sanemamiento ambiental</a>
+                                            </span>
+                                        </div>
+                                        <!--end article title-->
+                                        <div class="article__body">
+                                            <a href="blog-post.html">
+                                                <img alt="Image" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/blog-1.jpg" />
+                                            </a>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sed a velit totam repudiandae dignissimos, corporis eius praesentium
+                                                enim facilis possimus dolorem ut voluptatum porro, consectetur iste impedit beatae inventore.
+                                            </p>
+                                            <a href="blog-post.html">Continuar leyendo &raquo;</a>
+                                        </div>
+                                    </article>
+                                    <!--end item-->
+                                    <article class="masonry__item" data-masonry-filter="Web Design">
+                                        <div class="article__title">
+                                            <a href="blog-post.html">
+                                                <h2>Optio sed a velit totam repudiandae dignissimos</h2>
+                                            </a>
+                                            <span>10 de Diciembre 2017 </span>
+                                            en
+                                            <span>
+                                                <a href="#" class="category">Intermediación Laboral</a>
+                                            </span>
+                                        </div>
+                                        <!--end article title-->
+                                        <div class="article__body">
+                                            <a href="blog-post.html">
+                                                <img alt="Image" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/blog-1.jpg" />
+                                            </a>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sed a velit totam repudiandae dignissimos, corporis eius praesentium
+                                                enim facilis possimus dolorem ut voluptatum porro, consectetur iste impedit beatae inventore.
+                                            </p>
+                                            <a href="blog-post.html">Continuar leyendo &raquo;</a>
+                                        </div>
+                                    </article>
+                                    <!--end item-->
+                                </div>
+                                <!--end of masonry container-->
+                                <div class="pagination">
+                                    <a class="pagination__prev" href="#" title="Página anterior">&laquo;</a>
+                                    <ol>
+                                        <li class="pagination__current">
+                                            1
+                                        </li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a></li>
+                                        <li>
+                                            <a href="#">4</a>
+                                        </li>
+                                    </ol>
+                                    <a class="pagination__next" href="#" title="Página siguiente">&raquo;</a>
+                                </div>
+                            </div>
+                            <!--end masonry-->
+                        </div>
+
+                        <!-- sidebar -->
+                        <div class="col-xs-12 col-md-4 ">
+                            <br class="visible-xs visible-sm">
+                            <br class="visible-xs visible-sm">
+                            
+                            <div class="sidebar boxed boxed--border boxed--lg bg--secondary">
+                                <div class="sidebar__widget">
+                                    <h5>Buscar</h5>
+                                    <form>
+                                        <input type="text" name="query" placeholder="Ingrese su búsqueda aquí">
+                                    </form>
+                                </div>
+                                <!--end widget-->
+                                <div class="sidebar__widget">
+                                    <h5>Sobre el Blog</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptas incidunt nobis, illum ipsum odit nihil aperiam? Totam, eum. Et dicta libero repellat voluptatum soluta, repellendus minima beatae praesentium explicabo!
+                                    </p>
+                                </div>
+                                <!--end widget-->
+                                <div class="sidebar__widget">
+                                    <h5>Categorias</h5>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Saneamiento Ambiental</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Limpieza</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Intermediación Laboral</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end widget-->
+                                <div class="sidebar__widget">
+                                    <h5>Archivos</h5>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Mayo 2017</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Agosto 2017</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">octubre 2017</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Diiembre 2017</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end widget-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            
+            {% endblock %}
