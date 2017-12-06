@@ -61,6 +61,7 @@
     <!-- Scripts -->
     <script src="{% static 'main/js/jquery-3.1.1.min.js' %}"></script>
     <script src="{% static 'main/js/typed.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery-filestyle.min.js' %}"></script>
     <script src="{% static 'main/js/flickity.min.js' %}"></script>
     <script src="{% static 'main/js/typed.min.js' %}"></script>
     <script src="{% static 'main/js/isotope.min.js' %}"></script>
@@ -76,6 +77,12 @@
                 }
             }
         };
+         /* Input file */
+        $(":file").jfilestyle({ 
+            text: "Seleccionar archivo",
+            buttonBefore: true
+            
+        });
     </script>
 </body>
 </html>
