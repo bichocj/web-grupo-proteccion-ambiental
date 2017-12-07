@@ -19,7 +19,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 
-urlpatterns = [	
+urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^redactor/', include('redactor.urls')),
     url(r'^', include('main.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+handler500 = 'main.views.bad_request'
+handler404 = 'main.views.not_found'
+
