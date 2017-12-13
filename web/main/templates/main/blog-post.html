@@ -1,4 +1,5 @@
 {% extends 'main/components/layout.html' %}
+{% load static %}
 {% block content %}
             <!-- Header section -->
             <section id="header-section" class="imagebg cover cover-blocks bg--secondary text-center" data-overlay="6">
@@ -50,10 +51,7 @@
                                     <blockquote>
                                         &ldquo; We want everyone to have a great experience building their website &mdash; and with Stack they get just that&rdquo;
                                     </blockquote>
-                                    <!-- <figure class="col-xs-6 pull-right">
-                                        <img alt="Image" src="img/blog-2.jpg'%}" />
-                                        <figcaption>Credit: Chris Campbell (via Unsplash)</figcaption>
-                                    </figure> -->
+                                    
                                     <p>
                                         Co-working SpaceTeam fund big data prototype prototype long shadow latte big data. Innovate affordances personas user centered design paradigm user centered design innovate quantitative vs. qualitative pivot thought leader viral paradigm cortado affordances.
                                     </p>
@@ -74,12 +72,6 @@
                                             Compartir en Facebook
                                         </span>
                                     </a>
-                                    <a class="btn bg--twitter btn--icon" href="#">
-                                        <span class="btn__text">
-                                            <i class="socicon socicon-twitter"></i>
-                                            Compartir en Twitter
-                                        </span>
-                                    </a>
                                 </div>
                             </article>
                             <!--end item-->
@@ -91,7 +83,7 @@
             </section>
             
             <!-- mas articulos -->
-            <section class="bg--secondary space--sm">
+            <section id="more-articles" class="bg--secondary space--sm">
                 <div class="container">
                     <div class="row text-block">
                         <div class="col-sm-12">
