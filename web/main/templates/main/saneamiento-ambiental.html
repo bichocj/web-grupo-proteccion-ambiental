@@ -1,5 +1,5 @@
 {% extends 'main/components/layout.html' %}
-
+{% load static %}
 {% block content %}
         <!-- Header section -->
         <section id="header-section" class="imagebg cover cover-blocks bg--secondary" data-overlay="6">
@@ -30,7 +30,7 @@
                         <p class="lead text-center">
                              Protección Ambiental cuenta con los procedimientos, las personas y equipos adecuados para garantizar el cumplimiento de nuestro compromiso con el mejoramiento y calidad de las condiciones de vida de las personas, proporcionando ambientes saludables y libres de contaminación.
                         </p>
-                        <img alt="Image" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/blog-6.jpg">
+                        <img class="center-block" alt="Imagen saneamiento ambiental" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/blog-6.jpg">
                         <h4 class="text-center">Servicios que prestamos en Saneamiento Ambiental:</h4>
                         <ul class="list dots">
                             <li><b>Control de Vectores</b> 
@@ -46,7 +46,7 @@
                             </li>
                                 <br>
                             <div class="bg--primary boxed boxed--md metodologia">
-                                <img alt="Image" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/hero-1.jpg" class="border--round">
+                                <img alt="Imagen manejo Ecoeficiente" class="center-block border--round" src="{% static 'main/images/servicios/manejo-ecoeficiente-aplicacion.JPG'%}">
                                 <h3 class="text-uppercase">Metodología Ecoeficiente</h3>
                                 <!-- <br> -->
                                 <p>En Protección Ambiental contamos con procedimientos ecoeficientes en la aplicacion de las medidas correctivas del control de plagas  , es decir, nuestros servicios ofrecen el cumplimiento de eliminación de los agentes dañinos al mismo tiempo que reducimos los impactos al medio ambiente. </p>
@@ -67,12 +67,16 @@
                                 <br>Estos tratamientos químicos son los aplicados cuando son requisitos de ingreso o salida del país o de un área reglamentada o cuando es determinado por los resultados de inspección fitosanitaria realizado por SENASA. 
                             </li>
 
-                            <li><b>Limpieza y desinfección de reservorios de agua, tanques y cisternas (espacios confinados).</b>
+                            <li>
+                                <b>Limpieza y desinfección de reservorios de agua, tanques y cisternas (espacios confinados).</b>
                                 <br>
                                  Nuestro personal se encuentra capacitado para realizar trabajos en espacios confinados y trabajos en altura.
                                  <br>
                                  Realizamos una limpieza y desinfección profunda con materiales y equipos de material inocuo para garantizar la labor de limpieza.
                             </li>
+                            <div class="center-block">
+                                <img  class="center-block" src="{% static 'main/images/servicios/limpieza-espacio-confinado.jpg'%}" alt="Espacios confinados">
+                            </div>
 
                         </ul>
                         

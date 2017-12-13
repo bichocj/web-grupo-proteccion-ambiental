@@ -1,5 +1,5 @@
 {% extends 'main/components/layout.html' %}
-
+{% load static %}
 {% block content %}
         <!-- Header section -->
         <section id="header-section" class="imagebg cover cover-blocks bg--secondary" data-overlay="6">
@@ -32,7 +32,7 @@
                             instalaciones y ambientes de acuerdo a las necesidades del cliente, a cargo de nuestro personal calificado.
                             
                         </p>
-                        <img alt="Image" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/blog-6.jpg">
+                        <img alt="Imagen Limpieza profesional" src="{% static 'main/images/servicios/limpieza-01.jpg'%}">
                         <h4>Nuestros servicios de limpieza incluyen:</h4>
                         <ul class="list dots">
                             <li>Limpieza de oficinas, fábricas, almacenes, hospitales, y todo tipo de ambientes.</li>
@@ -45,7 +45,11 @@
                             <li>Pintura Horizontal y señalización.</li>
 
                         </ul>
-                        
+                        <br>
+                        <img alt="Imagen Señalización" src="{% static 'main/images/servicios/senalizacion.jpg'%}" class="center-block">
+                        <br>
+                        <!-- <img alt="Imagen Limpieza profesional" src="{% static 'main/images/servicios/limpieza-02.jpg'%}" class="center-block"> -->
+
                         <!--end item-->
                     </div>
                 </div>
