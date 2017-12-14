@@ -40,7 +40,7 @@
                                 </div>
                                 <hr> -->
                                 <div class="masonry__container"
->                                    {% get_posts as posts %}
+>                                    {% get_last_posts 2 page|default:1 as posts %}
                                     {% for post in posts %}
                                     <article class="masonry__item" data-masonry-filter="Web Design">
                                         <div class="article__title">
@@ -67,22 +67,7 @@
                                     {% endfor %}
                                 </div>
                                 <!--end of masonry container-->
-                                <div class="pagination">
-                                    <a class="pagination__prev" href="#" title="Página anterior">&laquo;</a>
-                                    <ol>
-                                        <li class="pagination__current">
-                                            1
-                                        </li>
-                                        <li>
-                                            <a href="#">2</a>
-                                        </li>
-                                        <li><a href="#">3</a></li>
-                                        <li>
-                                            <a href="#">4</a>
-                                        </li>
-                                    </ol>
-                                    <a class="pagination__next" href="#" title="Página siguiente">&raquo;</a>
-                                </div>
+                                {% include 'main/components/paginator.html' with objects=posts %}
                             </div>
                             <!--end masonry-->
                         </div>
