@@ -4,9 +4,12 @@ from main.models import Post
 
 
 def render_page(request, page_slug):
-    return render(request, 'main/' + page_slug + '.html')
+    page = request.GET['page']
+    
+
+    return render(request, 'main/' + page_slug + '.html', locals())
     try:
-        return render(request, 'main/' + page_slug + '.html')
+        return render(request, 'main/' + page_slug + '.html', locals())
     except:
         return not_found(request)
 
@@ -23,5 +26,5 @@ def bad_request(request):
     return render(request, "main/common/500.html", locals(), status=500)
 
 
-def show_post(request,post_id):
+def show_post(request,post_id):    
     return render(request,"main/blog-post.html", locals())
