@@ -22,3 +22,6 @@ class Post(models.Model):
     image = models.ImageField(null=True)
     publish_at = models.DateTimeField(verbose_name=_('publish date'))
     category = models.ForeignKey(Category, verbose_name=_('category'))
+
+    def __str__(self):
+        return  self.title

@@ -22,7 +22,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^redactor/', include('redactor.urls')),
-    url(r'^', include('main.urls')),
+    url(r'^', include('main.urls', namespace='main')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler500 = 'main.views.bad_request'
