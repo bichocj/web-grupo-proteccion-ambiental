@@ -1,19 +1,21 @@
 {% extends 'main/components/layout.html' %}
 {% load web_tags %}
+{% load static %}
 {% block content %}
         
         {% get_post_by_id post_id as post %}
             <!-- Header section -->
-            <section id="header-section" class="imagebg cover cover-blocks bg--secondary" data-overlay="6">
-                <div class="background-image-holder hidden-xs" style="background: url(&quot;https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/cowork-6.jpg&quot;); opacity: 1;">
-                    <img alt="background" src="https://s3-sa-east-1.amazonaws.com/mediumrare-stack/1.5.0/stack/img/cowork-6.jpg">
+            <section id="header-section" class="imagebg cover cover-blocks bg--secondary text-center" data-overlay="6">
+                <div class="background-image-holder hidden-xs" style="background: url" {% static 'main/images/blog-header.jpg'%}
+                    "); opacity: 1;">
+                    <img alt="background" src="{% static 'main/images/blog-header.jpg'%}">
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 col-md-5 ">
+                        <div class="col-sm-6 col-md-6 ">
                             <div>
                                 <h1>Blog</h1>
-                                <hr class="short">
+                                <hr class="short center-block">
                                 <p class="lead">
                                     Información relacionada al ámbito de nuestro trabajo.
                                 </p>
@@ -51,12 +53,6 @@
                                             Compartir en Facebook
                                         </span>
                                     </a>
-                                    <a class="btn bg--twitter btn--icon" href="#">
-                                        <span class="btn__text">
-                                            <i class="socicon socicon-twitter"></i>
-                                            Compartir en Twitter
-                                        </span>
-                                    </a>
                                 </div>
                             </article>
                             <!--end item-->
@@ -68,7 +64,7 @@
             </section>
             
             <!-- mas articulos -->
-            <section class="bg--secondary space--sm">
+            <section id="more-articles" class="bg--secondary space--sm">
                 <div class="container">
                     <div class="row text-block">
                         <div class="col-sm-12">
