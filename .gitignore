@@ -3,3 +3,6 @@ img/
 variant/
 PA-env
 .vscode/settings.json
+media/*
+.venv
+trash
