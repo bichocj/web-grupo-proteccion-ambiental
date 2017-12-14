@@ -2,7 +2,7 @@
     {% if objects.has_previous %}
       <a class="pagination__prev" href="?page={{ objects.previous_page_number }}" title="Página anterior">&laquo;</a>
      {% else %}
-      <a class="pagination__prev disabled" href="" title="Página anterior">&laquo;</a>
+      <a class="pagination__prev disabled" href="" title="No hay más páginas para mostrar">&laquo;</a>
       {% endif %}
     <ol>
     {% for i in objects.paginator.page_range %}
@@ -20,6 +20,6 @@
     {% if objects.has_next %}
     <a class="pagination__next" href="?page={{ objects.next_page_number }}" title="Página siguiente">&raquo;</a>
     {% else %}
-    <a class="pagination__next disabled" href="" title="Página siguiente">&raquo;</a>
+    <a class="pagination__next disabled" href="" title="No hay más páginas para mostrar">&raquo;</a>
     {% endif %}
 </div>

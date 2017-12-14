@@ -16,7 +16,7 @@
                                 <h1>Blog</h1>
                                 <hr class="short center-block">
                                 <p class="lead">
-                                    Información relacionada al ámbito de nuestro trabajo.
+                                    Información variada relacionada a nuestro ámbito de trabajo.
                                 </p>
                             </div>
                         </div>
@@ -52,9 +52,9 @@
                                                 <img alt="Image" src="{{ post.image.url }}" />
                                             </a>
                                             <p>
-                                               {{post.content|safe|truncatewords_html:50}}
+                                               {{post.content|safe|truncatewords_html:30}}
                                             </p>
-                                            <a href="{% url 'main:show_post' post.id %}">Continuar leyendo &raquo;</a>
+                                            <a class="color--primary--02" href="{% url 'main:show_post' post.id %}">Continuar leyendo &raquo;</a>
                                         </div>
                                     </article>
                                     {% endfor %}
@@ -81,7 +81,7 @@
                                 <div class="sidebar__widget">
                                     <h5>Sobre el Blog</h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptas incidunt nobis, illum ipsum odit nihil aperiam? Totam, eum. Et dicta libero repellat voluptatum soluta, repellendus minima beatae praesentium explicabo!
+                                        El blog de Protección Ambiental es un espacio creado para compartir información útil y variada sobre temas relacionados a nuestro ámbito de trabajo.
                                     </p>
                                 </div>
                                 <!--end widget-->
