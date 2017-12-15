@@ -37,7 +37,7 @@
                                     {% for post in posts %}
                                     <article class="masonry__item">
                                         <div class="article__title">
-                                            <a href="blog-post.html">
+                                            <a href="{% url 'main:show_post' post.id %}">
                                                 <h2>{{post.title}}</h2>
                                             </a>
                                             <span>{{post.publish_at|date:'j'}} de {{post.publish_at|date:'F'}} </span>
@@ -48,7 +48,7 @@
                                         </div>
                                         <!--end article title-->
                                         <div class="article__body">
-                                            <a href="blog-post.html">
+                                            <a href="{% url 'main:show_post' post.id %}">
                                                 <img alt="Image" src="{{ post.image.url }}" />
                                             </a>
                                             <p>
