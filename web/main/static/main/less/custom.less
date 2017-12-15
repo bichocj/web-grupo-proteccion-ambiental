@@ -488,6 +488,35 @@ article{
     }
     
 }
+
+// Search Result
+#search_submit { //input
+    &:hover {
+        transform: none;
+    }
+}
+article#search-result{
+    //Titulo
+    h2 {
+        span {
+            font-weight: 400;
+        }
+    }
+    //Formulario de busquea
+    .input-query  {
+        @media (min-width: 768px){
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+    #search_submit {
+        @media (min-width: 768px) {
+            margin-top: 0;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+}
 #more-articles a.block {
     max-height: 250px;
     overflow: hidden;

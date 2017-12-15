@@ -1,0 +1,140 @@
+{% extends 'main/components/layout.html' %}
+{% load static %}
+
+{% load web_tags %}
+{% block content %}
+
+            <!-- Header section -->
+            <section id="header-section" class="imagebg cover cover-blocks bg--secondary text-center" data-overlay="6">
+                <div class="background-image-holder hidden-xs" style="background: url"{% static 'main/images/blog-header.jpg'%}"); opacity: 1;">
+                    <img alt="background" src="{% static 'main/images/blog-header.jpg'%}">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 ">
+                            <div>
+                                <h1>Blog</h1>
+                                <hr class="short center-block">
+                                <p class="lead">
+                                    Información útil y variada
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+
+            <section class="space--sm">
+                <div class="container">
+                    <div class="row">
+                        <!-- list-posts -->
+                        <div class="col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0">
+                            <article id="search-result">
+                                <div class="article__title">
+                                    <h2>Resultado de Búsqueda<span> : Palabra Clave </span></h2>
+                                </div>
+                                <div class="article__body">
+                                    
+                                    <!-- /*** Si NO hubiera resultados -->
+                                    <p>
+                                        Lo sentimos, no se encontró ninguna conincidencia para su búsqueda. 
+                                        Intente nuevamente con otra palabra clave.
+                                    </p>
+
+                                    <div class="sidebar__widget container hidden-xs">
+                                        <br>
+                                        <form>
+                                            <div class="row">
+                                                <input type="text" name="query" placeholder="Ingrese su búsqueda aquí" class="input-query col-xs-12 col-sm-7"/>
+                                                <input type="submit" name="search" id="search_submit" value="Buscar" class="submit btn btn--primary col-xs-12 col-sm-5"/>
+                                            </div>
+                                        </form>
+                                        <br>
+                                    </div> 
+                                    <!-- End Si no hubiera resultados -->
+                                
+
+                                    <!-- /*** SI hubiera resultados -->
+                                        <!-- list-posts -->
+                                    <div id="post-list" class="masonry-blog-list">
+                                        {% get_last_posts 2 page|default:1 as posts %} {% for post in posts %}
+                                        <article class="masonry__item">
+                                            <div class="article__title">
+                                                <a href="{% url 'main:show_post' post.id %}">
+                                                    <h2>{{post.title}}</h2>
+                                                </a>
+                                                <span>{{post.publish_at|date:'j'}} de {{post.publish_at|date:'F'}} </span>
+                                                en
+                                                <span>
+                                                    <a href="#" class="category">{{post.category.name}}</a>
+                                                </span>
+                                            </div>
+                                            <!--end article title-->
+                                            <div class="article__body">
+                                                <a href="{% url 'main:show_post' post.id %}">
+                                                    <img alt="Image" src="{{ post.image.url }}" />
+                                                </a>
+                                                <p>
+                                                    {{post.content|safe|truncatewords_html:30}}
+                                                </p>
+                                                <a class="color--primary--02" href="{% url 'main:show_post' post.id %}">Continuar leyendo &raquo;</a>
+                                            </div>
+                                        </article>
+                                        {% endfor %}
+
+                                        <!-- Paginator -->
+                                        <br>
+                                        {% include 'main/components/paginator.html' with objects=posts %}
+                                        <!-- en dpaginator -->
+                                        
+                                    </div>
+                                         <!-- end list post-list -->
+                                    <!-- END SI hubiera resultados -->
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- sidebar -->
+                        <div class="col-md-4 col-md-push-1 col-xs-12">
+                            <br class="visible-xs visible-sm">
+                            <br class="visible-xs visible-sm">
+                            
+                            <div class="sidebar boxed boxed--border boxed--lg">
+                                <div class="sidebar__widget">
+                                    <h5>Buscar</h5>
+                                    <form>
+                                        <input type="text" name="query" placeholder="Ingrese su búsqueda aquí">
+                                        <input type="submit" name="search" class="submit btn btn--primary" id="searchsubmit" value="Buscar">
+                                    </form>
+                                </div>
+                                <!--end widget-->
+                                <div class="sidebar__widget">
+                                    <h5>Sobre el Blog</h5>
+                                    <p>
+                                        El blog de Protección Ambiental es un espacio creado para compartir información útil y variada sobre temas relacionados a nuestro ámbito de trabajo.
+                                    </p>
+                                </div>
+                                <!--end widget-->
+                                <div class="sidebar__widget">
+                                    <h5>Categorias</h5>
+                                    <ul>
+                                        {% get_categories as categories %}
+                                        {% for c in categories %}
+                                        <li>
+                                            <a href="#">{{c.name}}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            
+            {% endblock %}
