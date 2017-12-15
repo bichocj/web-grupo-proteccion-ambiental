@@ -476,14 +476,17 @@ footer {
     BLOG
 */
 
-article {
-    .article__body {
-        p,
+article{ 
+    .article__body{
+        p, 
         ul {
             font-size: 1.15em;
-            line-height: 2em;
+            &:not(:last-child) {
+                margin-bottom: 1.15em;
+            }
         }
     }
+    
 }
 #more-articles a.block {
     max-height: 250px;
