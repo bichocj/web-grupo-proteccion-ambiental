@@ -5,7 +5,7 @@ from main.models import Post
 
 def render_page(request, page_slug):
     # page = request.GET['page']
-    page = request.GET.get('page','')
+    page = request.GET.get('page', 1)
 
     return render(request, 'main/' + page_slug + '.html', locals())
     try:
