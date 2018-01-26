@@ -9,6 +9,7 @@
 /* 
     Helpers 
 */
+* {outline: 1px solid rgba(0, 255, 0, 0.3)}
 .icon--md {
   font-size: 3.8em;
 }
@@ -31,7 +32,8 @@
         color: #fefefe;
     }
     i{
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -99,7 +101,10 @@ ul.list {
 
 }
 
-
+/* Form elements */
+input[type], textarea, select {
+    border-color: #ccc;
+}
 
 
 /*
@@ -150,7 +155,8 @@ ul.list {
         margin-bottom: 1.5em;
         .slide {
             text-align: center;
-            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
             top: 50%;
         }
     }
@@ -371,6 +377,29 @@ footer {
     width: 100%;
     max-width: 750px;
 }
+
+// Slider de Otros servicios
+#otros-servicios{
+    .slider {
+        .feature   {
+            .icon {
+                -webkit-transition: color ease 200ms;
+                transition: color ease 200ms;
+            }
+            &:hover {
+                .boxed--border {
+                    border-color: @primary-color;
+                }
+                .icon {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+
 /*
     Bolsa de trabajo
 */
@@ -492,7 +521,8 @@ article{
 // Search Result
 #search_submit { //input
     &:hover {
-        transform: none;
+        -webkit-transform: none;
+                transform: none;
         opacity: 0.8;
     }
 }
