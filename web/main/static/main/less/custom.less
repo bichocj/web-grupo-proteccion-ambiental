@@ -3,7 +3,7 @@
 *
 */
 
-@primary-color: #dcbb55;
+@primary-color: #FCBD01;
 @primary-color--02: #31639c;
 
 /* 
@@ -50,13 +50,30 @@
     padding: 1.9em;
 }
 
+// Colors
+a {
+    color: @primary-color;
+    &:hover {
+        color: #FCCF46;
+    }
+}
 .color--primary--02 {
     color: @primary-color--02 !important;    
 }
-
+.color--primary {
+    color: @primary-color !important;
+}
 .bg--primary--02 {
     background: @primary-color--02 !important;        
 }
+.btn--primary, .btn--primary:visited {
+    background-color: @primary-color;
+}
+.btn--primary:hover {
+    background-color: #FCC92F;
+}
+// end colors
+
 ul.dots { 
     list-style-type: disc !important;  
 }
@@ -182,9 +199,6 @@ input[type], textarea, select {
 #servicios {
     padding-bottom:  7.42857143em - 4em;
     .feature-5 {
-        i {
-
-        }
         .feature__body {
             width: 70%;
             margin-left: 5%;
@@ -195,12 +209,22 @@ input[type], textarea, select {
     }
     .feature-4 {
         border: none;
+        -webkit-transition: background-color ease 250ms;
+            transition: background-color ease 250ms;
         hr {
             opacity: .8;
+            border-collapse: #ccc;
+            -webkit-transition: border-color ease 250ms;
+            transition: border-color ease 250ms;
         }
         p {
             height: 70px;
             min-height: initial !important;
+        }
+        //Trnaisition
+        .icon, h4, p {
+            -webkit-transition: color ease 250ms;
+            transition: color ease 250ms;
         }
         a.btn--primary {
             background-color: @primary-color;
@@ -208,8 +232,20 @@ input[type], textarea, select {
             border-color: @primary-color;
             &:hover{
                 color:#eee;
+                background-color: #E6AC01;
             }
         }
+        // Hover feature 4 
+        &:hover {
+            background-color: #FCC92F;
+            .icon, h4, p {
+                color: white;
+            }
+            hr {
+                border-color: white;
+            }
+        }
+
     }
 }
 @media screen and (max-width: 767px) {
